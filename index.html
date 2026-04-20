@@ -8,45 +8,62 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #0f0f0f;
+            background-color: #0b0b0b;
             color: #ffffff;
         }
 
         /* Header */
         .header {
+            padding: 70px 20px 40px;
             text-align: center;
-            padding: 60px 20px 30px 20px;
             background: linear-gradient(135deg, #1a1a1a, #000000);
         }
 
         .header h1 {
+            font-size: 44px;
             margin: 0;
-            font-size: 42px;
-            letter-spacing: 1px;
         }
 
         .header p {
             margin-top: 10px;
+            color: #bdbdbd;
             font-size: 18px;
-            color: #bbbbbb;
         }
 
-        /* Section titles */
-        .section-title {
-            text-align: center;
-            margin: 40px 0 20px 0;
-            font-size: 26px;
-            color: #ffffff;
-        }
-
-        /* PDF container */
-        .pdf-container {
-            width: 90%;
-            height: 85vh;
+        /* Section container */
+        .container {
+            max-width: 1000px;
             margin: auto;
-            border-radius: 10px;
+            padding: 40px 20px;
+        }
+
+        /* Card style */
+        .card {
+            background: #141414;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border: 1px solid #222;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 22px;
+            border-left: 4px solid #ffffff;
+            padding-left: 10px;
+        }
+
+        p {
+            color: #cfcfcf;
+            line-height: 1.6;
+        }
+
+        /* PDF viewer */
+        .pdf-box {
+            height: 80vh;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 0 20px rgba(255,255,255,0.1);
+            border: 1px solid #222;
         }
 
         iframe {
@@ -55,58 +72,77 @@
             border: none;
         }
 
-        /* Resume section */
-        .resume {
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .resume-box {
-            border: 1px solid #333;
-            padding: 40px;
-            width: 60%;
-            margin: auto;
-            border-radius: 10px;
-            color: #888;
+        /* Resume button */
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
         }
 
         .footer {
             text-align: center;
             padding: 30px;
-            color: #555;
-            font-size: 14px;
+            color: #666;
+            font-size: 13px;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <div class="header">
-        <h1>Dylan Johnson</h1>
-        <p>Mechanical Engineer | CAD Design | Aerospace Systems</p>
+<!-- HEADER -->
+<div class="header">
+    <h1>Dylan Johnson</h1>
+    <p>Mechanical Engineer | CAD Design | Aerospace Systems</p>
+</div>
+
+<div class="container">
+
+    <!-- ABOUT -->
+    <div class="card">
+        <h2>About</h2>
+        <p>
+            Mechanical engineering graduate focused on CAD design, aerospace systems, and fluid modeling.
+            Experienced in system-level design, simulation, and manufacturing workflows.
+        </p>
     </div>
 
-    <!-- PORTFOLIO SECTION -->
-    <div class="section-title">Engineering Portfolio</div>
-
-    <div class="pdf-container">
-        <iframe src="johnson_dylan_projects_portfolio.pdf"></iframe>
+    <!-- PROJECT HIGHLIGHT (placeholder for now) -->
+    <div class="card">
+        <h2>Featured Work</h2>
+        <p>
+            Fuel transfer subsystem design validated within 1% of experimental results using MATLAB modeling and SolidWorks CAD.
+        </p>
+        <p>
+            More detailed breakdown available in full portfolio below.
+        </p>
     </div>
 
-    <!-- RESUME SECTION -->
-    <div class="section-title">Resume</div>
-
-    <div class="resume">
-        <div class="resume-box">
-            <p>Resume section coming soon</p>
+    <!-- PDF PORTFOLIO -->
+    <div class="card">
+        <h2>Full Engineering Portfolio</h2>
+        <div class="pdf-box">
+            <iframe src="johnson_dylan_projects_portfolio.pdf"></iframe>
         </div>
     </div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-        Built and hosted with GitHub Pages
+    <!-- RESUME -->
+    <div class="card">
+        <h2>Resume</h2>
+        <p>Download or view my resume (to be added).</p>
+        <a class="btn" href="#">Coming Soon</a>
     </div>
+
+</div>
+
+<div class="footer">
+    Built with GitHub Pages
+</div>
 
 </body>
 </html>
