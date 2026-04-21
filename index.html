@@ -2,68 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dylan Johnson | Engineering Portfolio</title>
+    <title>Dylan Johnson | Mechanical Engineer</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #0b0b0b;
-            color: #ffffff;
+            color: white;
         }
 
-        /* Header */
-        .header {
-            padding: 70px 20px 40px;
+        /* NAVBAR */
+        .nav {
+            position: sticky;
+            top: 0;
+            background: #000;
+            padding: 15px;
             text-align: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* HEADER */
+        .header {
+            text-align: center;
+            padding: 80px 20px 50px;
             background: linear-gradient(135deg, #1a1a1a, #000000);
         }
 
         .header h1 {
-            font-size: 44px;
+            font-size: 48px;
             margin: 0;
         }
 
         .header p {
             margin-top: 10px;
-            color: #bdbdbd;
+            color: #bbb;
             font-size: 18px;
         }
 
-        /* Section container */
-        .container {
+        /* SECTION */
+        .section {
             max-width: 1000px;
             margin: auto;
-            padding: 40px 20px;
-        }
-
-        /* Card style */
-        .card {
-            background: #141414;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            border: 1px solid #222;
+            padding: 50px 20px;
         }
 
         h2 {
-            margin-top: 0;
-            font-size: 22px;
-            border-left: 4px solid #ffffff;
+            border-left: 4px solid white;
             padding-left: 10px;
         }
 
+        .card {
+            background: #141414;
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 1px solid #222;
+        }
+
         p {
-            color: #cfcfcf;
+            color: #ccc;
             line-height: 1.6;
         }
 
-        /* PDF viewer */
+        /* PDF */
         .pdf-box {
             height: 80vh;
-            border-radius: 12px;
+            margin-top: 20px;
+            border-radius: 10px;
             overflow: hidden;
-            border: 1px solid #222;
         }
 
         iframe {
@@ -72,10 +86,10 @@
             border: none;
         }
 
-        /* Resume button */
+        /* BUTTON */
         .btn {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 15px;
             padding: 10px 15px;
             background: white;
             color: black;
@@ -88,20 +102,82 @@
             text-align: center;
             padding: 30px;
             color: #666;
-            font-size: 13px;
         }
     </style>
 </head>
+
 <body>
+
+<!-- NAV -->
+<div class="nav">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#resume">Resume</a>
+</div>
 
 <!-- HEADER -->
 <div class="header">
     <h1>Dylan Johnson</h1>
-    <p>Mechanical Engineer | CAD Design | Project Engineer</p>
+    <p>Mechanical Engineer | CAD Design | Aerospace Systems</p>
 </div>
 
-<div class="container">
-
-    <!-- ABOUT -->
+<!-- ABOUT -->
+<div class="section" id="about">
+    <h2>About</h2>
     <div class="card">
-        <h2>About</h2>
+        <p>
+            Mechanical engineering graduate with experience in CAD design, fluid systems, and aerospace structures.
+            Passionate about solving complex engineering problems and building real-world systems.
+        </p>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section" id="projects">
+    <h2>Featured Project</h2>
+
+    <div class="card">
+        <h3>Fuel Transfer Subsystem – TB2 Aerospace</h3>
+
+        <p><strong>Problem:</strong> Design a reliable vertical fuel transfer system.</p>
+
+        <p><strong>Approach:</strong> Developed system architecture in SolidWorks and modeled fluid behavior using MATLAB.</p>
+
+        <p><strong>Result:</strong> Achieved model predictions within <strong>1% of experimental test data</strong>.</p>
+
+        <p>
+            This project involved system-level design, component integration, and validation through both simulation and testing.
+        </p>
+    </div>
+</div>
+
+<!-- PDF PORTFOLIO -->
+<div class="section" id="portfolio">
+    <h2>Full Portfolio</h2>
+
+    <div class="card">
+        <p>View full project documentation and additional work:</p>
+
+        <div class="pdf-box">
+            <iframe src="johnson_dylan_projects_portfolio.pdf"></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- RESUME -->
+<div class="section" id="resume">
+    <h2>Resume</h2>
+
+    <div class="card">
+        <p>Resume coming soon.</p>
+        <a class="btn" href="#">Add Resume Later</a>
+    </div>
+</div>
+
+<div class="footer">
+    Built with GitHub Pages
+</div>
+
+</body>
+</html>
